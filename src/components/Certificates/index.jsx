@@ -108,7 +108,7 @@ const Certificates = () => {
             href={certificate.refer}
             style={{
               margin: "12px 0px",
-              borderLeft: theme && "2px solid #8181EF",
+              borderLeft: theme === "Dark" && "2px solid #8181EF",
             }}
           >
             <p

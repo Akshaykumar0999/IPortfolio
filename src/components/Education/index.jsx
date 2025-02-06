@@ -29,7 +29,10 @@ const Education = () => {
       </h3>
       <div
         className="experience-card"
-        style={{ margin: "12px 0px", borderLeft: theme && "2px solid #8181EF" }}
+        style={{
+          margin: "12px 0px",
+          borderLeft: theme === "Dark" && "2px solid #8181EF",
+        }}
       >
         <p
           style={{
@@ -55,7 +58,10 @@ const Education = () => {
       </div>
       <div
         className="experience-card"
-        style={{ margin: "12px 0px", borderLeft: theme && "2px solid #8181EF" }}
+        style={{
+          margin: "12px 0px",
+          borderLeft: theme === "Dark" && "2px solid #8181EF",
+        }}
       >
         <p
           style={{

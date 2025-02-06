@@ -40,20 +40,18 @@ const Achievements = () => {
           <div className="achivement-details-card">
             <h5
               style={{
-                color: "#484848",
                 fontSize: "17px",
                 marginBottom: "12px",
-                color: theme === "Dark" && "#DDDDDD",
+                color: theme === "Dark" ? "#DDDDDD" : "#484848",
               }}
             >
               30 Days Of Coding Challange In Nxt Wave
             </h5>
             <p
               style={{
-                color: "#777777",
                 fontSize: "14px",
                 marginBottom: "12px",
-                color: theme === "Dark" && "#BBBBBB",
+                color: theme === "Dark" ? "#BBBBBB" : "#777777",
               }}
             >
               By consistently completing daily coding tasks provided by nxtWave
@@ -79,20 +77,18 @@ const Achievements = () => {
           <div className="achivement-details-card">
             <h5
               style={{
-                color: "#484848",
                 fontSize: "17px",
                 marginBottom: "12px",
-                color: theme === "Dark" && "#DDDDDD",
+                color: theme === "Dark" ? "#DDDDDD" : "#484848",
               }}
             >
               Recognized for Excellence in Teaching ReactJS
             </h5>
             <p
               style={{
-                color: "#777777",
                 fontSize: "14px",
                 marginBottom: "12px",
-                color: theme === "Dark" && "#BBBBBB",
+                color: theme === "Dark" ? "#BBBBBB" : "#777777",
               }}
             >
               I taught ReactJS and frontend technologies at CSIT Software
