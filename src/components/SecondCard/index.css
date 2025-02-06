@@ -1,0 +1,8 @@
+.secondcard {
+    width: 68%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

@@ -1,0 +1,19 @@
+.certificates-ul-list {
+    width: 100%;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.certificate-li-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0px;
+    border-left: 2px solid #ffdd2e;
+    padding-left: 10px;
+}

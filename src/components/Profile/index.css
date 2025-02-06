@@ -1,0 +1,50 @@
+.profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 17px;
+    margin-bottom: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.profile-image-card {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #ffdd2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.profile-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #474747;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+.profile-text {
+    text-align: center;
+    width: 85%;
+    color: #525252;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.download-resume {
+    border-radius: 10px;
+    border: 1px solid #525252;
+    color: #525252;
+    padding: 8px 16px;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
