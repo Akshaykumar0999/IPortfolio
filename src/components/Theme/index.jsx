@@ -37,15 +37,17 @@ const Theme = () => {
       <div className="theme-icon-settings">
         <VscSettings
           style={{
-            border: "1px solid #000",
+            border: theme === "Dark" ? "1px solid #fff" : "1px solid #000",
             borderRadius: "3px",
-            color: theme === "Dark" && "#ffffff",
+            color: theme === "Dark" ? "#ffffff" : "#525252",
           }}
         />
         <select
           style={{
             background:
-              theme === "Dark" && "oklch(25.3267% .015896 252.417568 / 1)",
+              theme === "Dark"
+                ? "oklch(25.3267% .015896 252.417568 / 1)"
+                : "#ffffff",
             color: theme === "Dark" && "#BBBBBB",
           }}
           className="theme-select"

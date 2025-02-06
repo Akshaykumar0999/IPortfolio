@@ -31,21 +31,23 @@ const Experience = () => {
           className="experience-card"
           style={{
             margin: "12px 0px",
-            borderLeft: theme && "2px solid #8181EF",
+            borderLeft: theme === 'Dark' && "2px solid #8181EF",
           }}
         >
           <p
             style={{
               fontSize: "12px",
-              color: "#525252",
               fontWeight: "500",
-              color: theme === "Dark" && "#BBBBBB",
+              color: theme === "Dark" ? "#BBBBBB" : "#525252",
             }}
           >
             January 2022 - Present
           </p>
           <p
-            style={{ fontWeight: "600", color: theme === "Dark" && "#DDDDDD" }}
+            style={{
+              fontWeight: "600",
+              color: theme === "Dark" ? "#DDDDDD" : "#525252",
+            }}
           >
             Frontend Developer
           </p>
@@ -54,7 +56,7 @@ const Experience = () => {
               fontSize: "14px",
               color: "#525252",
               fontWeight: "500",
-              color: theme === "Dark" && "#BBBBBB",
+              color: theme === "Dark" ? "#BBBBBB" : "#525252",
             }}
           >
             Joudah Info Lingo Tech Pvt Ltd.

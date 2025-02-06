@@ -4,6 +4,16 @@ import { ThemeContext } from '../../Context/themeContext';
 
 const Profile =()=> {
   const {theme} = useContext(ThemeContext);
+  const handleDownload = () => {
+    const resumeUrl = '/Akshaykumar_Frontend.pdf'
+    const link =  document.createElement('a');
+    link.href = resumeUrl;
+    link.download = "Akshaykumar_Frontend.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+  }
     return (
       <div
         className="profile"
@@ -45,6 +55,7 @@ const Profile =()=> {
             color: theme === "Dark" && "#BBBBBB",
           }}
           className="download-resume"
+          onClick={handleDownload}
         >
           Download Resume
         </button>
