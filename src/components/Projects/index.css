@@ -76,3 +76,20 @@
     border-radius: 6px;
     border: 1px solid #d5d5d5;
 }
+
+@media screen and (max-width: 767px) {
+    .projects {
+        margin-bottom: 10px;
+        padding: 0px;
+        margin-bottom: 25px;
+    }
+    .projects-headers {
+        padding: 10px;
+    }
+    .projects-list-main {
+        padding: 10px;
+    }
+    .Project-list-item {
+        width: 100%;
+    }
+}

@@ -32,3 +32,10 @@
     margin-left: 8px;
     color: #707070;
 }
+
+@media screen and (max-width: 768px) {
+    .profileMain {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+}
