@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import "./index.css";
+import { ThemeContext } from "../../Context/themeContext";
 
 const cretifiactesList = [
   {
@@ -74,14 +76,26 @@ const cretifiactesList = [
   },
 ];
 const Certificates = () => {
+  const {theme} = useContext(ThemeContext)
   return (
-    <div className="techstack">
+    <div
+      className="techstack"
+      style={{
+        background:
+          theme === "Dark" && "oklch(25.3267% .015896 252.417568 / 1)",
+        color: theme === "Dark" && "#BBBBBB",
+        boxShadow:
+          theme === "Dark" &&
+          "rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px",
+      }}
+    >
       <h3
         className="theme-title"
         style={{
           marginBottom: "12px",
           textAlign: "left",
           alignSelf: "flex-start",
+          color: theme === "Dark" && "#BBBBBB",
         }}
       >
         Certificates
@@ -92,19 +106,36 @@ const Certificates = () => {
             className="certificate-li-list"
             key={certificate.id}
             href={certificate.refer}
+            style={{
+              margin: "12px 0px",
+              borderLeft: theme && "2px solid #8181EF",
+            }}
           >
             <p
-              style={{ fontSize: "12px", color: "#525252", fontWeight: "500" }}
+              style={{
+                fontSize: "12px",
+                color: theme === "Dark" ? "#BBBBBB" : "#525252",
+                fontWeight: "500",
+              }}
             >
               Nxt Wave Disruptive Technologies.
             </p>
             <p
-              style={{ fontWeight: "600", color: "#525252", fontSize: "16px", fontWeight: '600' }}
+              style={{
+                fontWeight: "600",
+                color: theme === "Dark" ? "#DDDDDD" : "#525252",
+                fontSize: "16px",
+                fontWeight: "600",
+              }}
             >
               {certificate.name}
             </p>
             <p
-              style={{ fontSize: "14px", color: "#525252", fontWeight: "bold" }}
+              style={{
+                fontSize: "14px",
+                color: theme === "Dark" ? "#BBBBBB" : "#525252",
+                fontWeight: "bold",
+              }}
             >
               {certificate.course}
             </p>

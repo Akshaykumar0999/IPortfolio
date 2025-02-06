@@ -8,6 +8,8 @@ import {
 import { MdEmail } from "react-icons/md";
 import { GiMineralHeart } from "react-icons/gi";
 import { VscMapVerticalFilled } from "react-icons/vsc";
+import { useContext } from "react";
+import { ThemeContext } from "../../Context/themeContext";
 
 const contactListCard = [
   {
@@ -54,9 +56,25 @@ const contactListCard = [
   },
 ];
 const Contact = () => {
+  const {theme} = useContext(ThemeContext)
     return (
-      <div className="contact">
-        <ul className="contact-ul-list">
+      <div
+        className="contact"
+        style={{
+          background:
+            theme === "Dark" && "oklch(25.3267% .015896 252.417568 / 1)",
+          color: theme === "Dark" && "#BBBBBB",
+          boxShadow:
+            theme === "Dark" &&
+            "rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px",
+        }}
+      >
+        <ul
+          className="contact-ul-list"
+          style={{
+            color: theme === "Dark" && "#BBBBBB",
+          }}
+        >
           <li className="contact-li-list">
             <div
               style={{
@@ -64,17 +82,31 @@ const Contact = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 fontWeight: "600",
+                color: theme === "Dark" && "#BBBBBB",
               }}
             >
               <IoLocation style={{ marginRight: "8px" }} />
               <p>Base In:</p>
             </div>
-            <p style={{ fontSize: "14px", color: "#525252", fontWeight: '500' }}>
+            <p
+              style={{
+                fontSize: "14px",
+                color: "#525252",
+                fontWeight: "500",
+                color: theme === "Dark" && "#BBBBBB",
+              }}
+            >
               Hyderabad, India
             </p>
           </li>
           {contactListCard.map((list) => (
-            <li key={list.id} className="contact-li-list">
+            <li
+              key={list.id}
+              className="contact-li-list"
+              style={{
+                color: theme === "Dark" && "#BBBBBB",
+              }}
+            >
               <div
                 style={{
                   display: "flex",
@@ -88,7 +120,10 @@ const Contact = () => {
               </div>
               <a
                 href={list.reference}
-                style={{ fontSize: "14px", color: "#525252" }}
+                style={{
+                  fontSize: "14px",
+                  color: theme === "Dark" ? "#BBBBBB" : "#525252",
+                }}
               >
                 {list.text}
               </a>

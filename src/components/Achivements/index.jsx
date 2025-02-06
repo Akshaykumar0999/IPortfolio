@@ -1,16 +1,41 @@
+import { useContext } from "react";
 import "./index.css";
+import { ThemeContext } from "../../Context/themeContext";
 
 const Achievements = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="Achivement">
+    <div
+      className="Achivement"
+      style={{
+        backgroundColor:
+          theme === "Dark" && "oklch(25.3267% .015896 252.417568 / .4)",
+      }}
+    >
       <div className="projects-headers">
-        <h3 className="theme-title" style={{ alignSelf: "flex-start" }}>
+        <h3
+          className="theme-title"
+          style={{
+            alignSelf: "flex-start",
+            color: theme === "Dark" && "#BBBBBB",
+          }}
+        >
           Achievements
         </h3>
         <p></p>
       </div>
       <div className="achivement-list-main">
-        <div className="achievements-card">
+        <div
+          className="achievements-card"
+          style={{
+            background:
+              theme === "Dark" && "oklch(25.3267% .015896 252.417568 / 1)",
+            color: theme === "Dark" && "#BBBBBB",
+            boxShadow:
+              theme === "Dark" &&
+              "rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px",
+          }}
+        >
           <img src="/projects/NxtWave2.jpg" className="achive-image" />
           <div className="achivement-details-card">
             <h5
@@ -18,6 +43,7 @@ const Achievements = () => {
                 color: "#484848",
                 fontSize: "17px",
                 marginBottom: "12px",
+                color: theme === "Dark" && "#DDDDDD",
               }}
             >
               30 Days Of Coding Challange In Nxt Wave
@@ -27,6 +53,7 @@ const Achievements = () => {
                 color: "#777777",
                 fontSize: "14px",
                 marginBottom: "12px",
+                color: theme === "Dark" && "#BBBBBB",
               }}
             >
               By consistently completing daily coding tasks provided by nxtWave
@@ -37,7 +64,17 @@ const Achievements = () => {
             </p>
           </div>
         </div>
-        <div className="achievements-card">
+        <div
+          className="achievements-card"
+          style={{
+            background:
+              theme === "Dark" && "oklch(25.3267% .015896 252.417568 / 1)",
+            color: theme === "Dark" && "#BBBBBB",
+            boxShadow:
+              theme === "Dark" &&
+              "rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px",
+          }}
+        >
           <img src="/projects/csit.png" className="achive-image" />
           <div className="achivement-details-card">
             <h5
@@ -45,6 +82,7 @@ const Achievements = () => {
                 color: "#484848",
                 fontSize: "17px",
                 marginBottom: "12px",
+                color: theme === "Dark" && "#DDDDDD",
               }}
             >
               Recognized for Excellence in Teaching ReactJS
@@ -54,6 +92,7 @@ const Achievements = () => {
                 color: "#777777",
                 fontSize: "14px",
                 marginBottom: "12px",
+                color: theme === "Dark" && "#BBBBBB",
               }}
             >
               I taught ReactJS and frontend technologies at CSIT Software
